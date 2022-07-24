@@ -1,0 +1,15 @@
+#include <stdio.h>
+void adjust(int *p,int *q){
+ if (*p>*q){
+ int x=*p;
+ *p=*q;
+ *q=x;}
+ }
+int main(void) {
+ int a=4, b=3, c=1, d=2;
+ adjust(&a, &b);
+ printf("a=%d, b=%d\n", a, b); // deve exibir a=3, b=4
+ adjust(&c, &d);
+ printf("c=%d, d=%d\n", c, d); // deve exibir c=1, d=2
+ return 0;
+}
